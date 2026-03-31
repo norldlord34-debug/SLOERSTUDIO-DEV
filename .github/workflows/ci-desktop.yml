@@ -76,5 +76,7 @@ jobs:
             libappindicator3-dev librsvg2-dev patchelf
 
       - name: cargo check
-        run: cargo check
+        run: |
+          export LD_LIBRARY_PATH=$(echo "${LD_LIBRARY_PATH}" | tr ':' '\n' | grep -v '^$' | tr '\n' ':' | sed 's/:$//')
+          cargo check
         working-directory: apps/desktop/src-tauri

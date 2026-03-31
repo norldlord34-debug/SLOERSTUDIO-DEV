@@ -76,5 +76,7 @@ jobs:
             libasound2-dev libpulse-dev
 
       - name: cargo check
-        run: cargo check
+        run: |
+          export LD_LIBRARY_PATH=$(echo "${LD_LIBRARY_PATH}" | tr ':' '\n' | grep -v '^$' | tr '\n' ':' | sed 's/:$//')
+          cargo check
         working-directory: apps/voice/src-tauri
