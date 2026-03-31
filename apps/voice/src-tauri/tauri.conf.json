@@ -50,8 +50,6 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ],
-    "resources": {
-      "ggml-base.en.bin": "ggml-base.en.bin"
-    }
+    "resources": []
   }
 }

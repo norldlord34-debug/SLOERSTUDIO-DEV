@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Zap } from "lucide-react";
@@ -53,9 +54,9 @@ export default function DiscordPage() {
           💬 Enter the Discord →
         </a>
 
-        <a href="/" className="mt-6 text-sm text-gray-500 hover:text-white transition-colors flex items-center gap-1">
+        <Link href="/" className="mt-6 text-sm text-gray-500 hover:text-white transition-colors flex items-center gap-1">
           🏠 Return to Homepage
-        </a>
+        </Link>
       </div>
       <Footer />
     </div>

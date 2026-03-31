@@ -8,7 +8,7 @@ import { FileExplorer } from '@/components/FileExplorer'
 import { GitPanel } from '@/components/GitPanel'
 import dynamic from 'next/dynamic'
 
-const MonacoEditor = dynamic(() => import('@monaco-editor/react').then((m) => m.default), { ssr: false })
+const MonacoEditor = dynamic(() => import('@monaco-editor/react').then((m) => m.default as any), { ssr: false })
 
 /* ── Language detection ────────────────────────────────────── */
 
