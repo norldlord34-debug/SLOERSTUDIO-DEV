@@ -7,8 +7,9 @@ import { useStore } from '@/store/useStore'
 import { FileExplorer } from '@/components/FileExplorer'
 import { GitPanel } from '@/components/GitPanel'
 import dynamic from 'next/dynamic'
+import type { EditorProps } from '@monaco-editor/react'
 
-const MonacoEditor = dynamic(() => import('@monaco-editor/react').then((m) => m.default as any), { ssr: false })
+const MonacoEditor = dynamic<EditorProps>(() => import('@monaco-editor/react'), { ssr: false })
 
 /* ── Language detection ────────────────────────────────────── */
 
@@ -215,7 +216,7 @@ export function CodeEditorView() {
               height="100%"
               language={activeTab.language}
               value={activeTab.content}
-              onChange={(v) => updateContent(activeTab.path, v)}
+              onChange={(v: string | undefined) => updateContent(activeTab.path, v)}
               theme="vs-dark"
               options={{
                 fontSize: 13,
