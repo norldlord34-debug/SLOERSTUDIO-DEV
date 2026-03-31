@@ -7,9 +7,16 @@ import { useStore } from '@/store/useStore'
 import { FileExplorer } from '@/components/FileExplorer'
 import { GitPanel } from '@/components/GitPanel'
 import dynamic from 'next/dynamic'
+import type { ComponentType } from 'react'
 import type { EditorProps } from '@monaco-editor/react'
 
-const MonacoEditor = dynamic<EditorProps>(() => import('@monaco-editor/react'), { ssr: false })
+const MonacoEditor = dynamic<EditorProps>(
+  async () => {
+    const { default: Editor } = await import('@monaco-editor/react')
+    return Editor as ComponentType<EditorProps>
+  },
+  { ssr: false }
+)
 
 /* ── Language detection ────────────────────────────────────── */
 

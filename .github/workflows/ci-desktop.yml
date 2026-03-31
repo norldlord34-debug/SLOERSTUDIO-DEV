@@ -76,7 +76,7 @@ jobs:
             libappindicator3-dev librsvg2-dev patchelf
 
       - name: cargo check
-        run: |
-          unset LD_LIBRARY_PATH
-          cargo check
+        run: cargo check
         working-directory: apps/desktop/src-tauri
+        env:
+          LD_LIBRARY_PATH: ""
