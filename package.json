@@ -1,0 +1,54 @@
+{
+  "name": "sloerstudio-dev",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SloerStudio — Enterprise Agentic Development Platform. Monorepo containing all products.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=apps/web",
+    "dev:desktop": "npm run tauri:dev --workspace=apps/desktop",
+    "dev:voice": "npm run tauri:dev --workspace=apps/voice",
+    "build:web": "npm run build --workspace=apps/web",
+    "build:desktop": "npm run tauri:build --workspace=apps/desktop",
+    "build:voice": "npm run tauri:build --workspace=apps/voice",
+    "build:all": "npm run build:web && npm run build:desktop && npm run build:voice",
+    "lint:all": "npm run lint --workspaces --if-present",
+    "typecheck:all": "npm run typecheck --workspaces --if-present",
+    "db:seed": "npm run db:seed --workspace=apps/web",
+    "db:studio": "npm run db:studio --workspace=apps/web",
+    "clean": "powershell -Command \"Get-ChildItem -Path . -Include node_modules,.next,target,dist,out -Recurse -Directory | Remove-Item -Recurse -Force\"",
+    "changeset": "changeset",
+    "changeset:add": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:status": "changeset status",
+    "turbo:build": "turbo run build",
+    "turbo:lint": "turbo run lint",
+    "turbo:test": "turbo run test"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/norldlord34-debug/SLOERSTUDIO-DEV"
+  },
+  "author": "SloerStudio",
+  "license": "MIT",
+  "keywords": [
+    "sloerstudio",
+    "sloerspace",
+    "agentic-ide",
+    "ai-agents",
+    "tauri",
+    "rust",
+    "nextjs",
+    "monorepo"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.30.0"
+  }
+}

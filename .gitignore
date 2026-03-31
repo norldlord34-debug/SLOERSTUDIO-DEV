@@ -1,0 +1,65 @@
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+.pnpm-store/
+
+# ── Turborepo ─────────────────────────────────────────────────────────────────
+.turbo/
+.env.turbo
+
+# ── Build outputs ─────────────────────────────────────────────────────────────
+.next/
+out/
+dist/
+build/
+*.tsbuildinfo
+
+# ── Rust / Tauri ──────────────────────────────────────────────────────────────
+apps/desktop/src-tauri/target/
+apps/voice/src-tauri/target/
+*.pdb
+
+# ── Whisper model files (large binaries — download separately) ────────────────
+*.bin
+*.gguf
+*.ggml
+
+# ── Environment ───────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+.env.production
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+*.suo
+*.user
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+coverage/
+.nyc_output/
+
+# ── Prisma ────────────────────────────────────────────────────────────────────
+apps/web/prisma/dev.db
+apps/web/prisma/dev.db-journal
+
+# ── Release artifacts ─────────────────────────────────────────────────────────
+apps/desktop/release/
+apps/voice/release/
+*.exe
+*.msi
+*.dmg
+*.AppImage
+*.deb

@@ -1,0 +1,54 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": ["**/.env.*local", ".env.turbo"],
+  "globalEnv": ["NODE_ENV", "CI"],
+  "remoteCache": {
+    "enabled": true,
+    "signature": true
+  },
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "public/**", "*.config.*", "*.json", "!package-lock.json"],
+      "outputs": [".next/**", "!.next/cache/**", "out/**", "dist/**", "build/**"]
+    },
+    "lint": {
+      "inputs": ["src/**", "*.config.*", ".eslintrc*", "eslint.config*"],
+      "outputs": []
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "*.json", "!package-lock.json"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "*.config.*"],
+      "outputs": ["coverage/**"],
+      "env": ["CI"]
+    },
+    "test:unit": {
+      "inputs": ["src/**", "*.config.*"],
+      "outputs": ["coverage/**"]
+    },
+    "db:seed": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "tauri:dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "tauri:build": {
+      "dependsOn": ["^build"],
+      "inputs": ["src/**", "src-tauri/**", "*.config.*"],
+      "outputs": ["src-tauri/target/release/bundle/**"]
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}
