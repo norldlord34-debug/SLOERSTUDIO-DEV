@@ -77,6 +77,6 @@ jobs:
 
       - name: cargo check
         run: |
-          export LD_LIBRARY_PATH=$(echo "${LD_LIBRARY_PATH}" | tr ':' '\n' | grep -v '^$' | tr '\n' ':' | sed 's/:$//')
+          unset LD_LIBRARY_PATH
           cargo check
         working-directory: apps/desktop/src-tauri

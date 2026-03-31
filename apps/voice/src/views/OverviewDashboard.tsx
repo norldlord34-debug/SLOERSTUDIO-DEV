@@ -469,7 +469,7 @@ export default function OverviewDashboard() {
                                                 <Cell key={`cell-${index}`} fill={SENTIMENT_COLORS[index % SENTIMENT_COLORS.length]} />
                                             ))}
                                         </Pie>
-                                        <Tooltip contentStyle={{ backgroundColor: 'var(--bg-elevated)', border: '1px solid var(--border-default)', borderRadius: '8px', fontSize: '12px' }} formatter={(value: number | undefined) => `${value ?? 0}%`} />
+                                        <Tooltip contentStyle={{ backgroundColor: 'var(--bg-elevated)', border: '1px solid var(--border-default)', borderRadius: '8px', fontSize: '12px' }} formatter={((value: number | undefined) => `${value ?? 0}%`) as any} />
                                     </PieChart>
                                 </ResponsiveContainer>
                             </div>
