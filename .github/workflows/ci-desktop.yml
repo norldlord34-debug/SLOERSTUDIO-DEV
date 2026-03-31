@@ -58,6 +58,8 @@ jobs:
   rust-check:
     name: Rust check (fast, no compile)
     runs-on: ubuntu-latest
+    env:
+      LD_LIBRARY_PATH: ""
     steps:
       - uses: actions/checkout@v4
 
