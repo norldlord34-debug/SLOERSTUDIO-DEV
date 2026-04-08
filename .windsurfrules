@@ -1,0 +1,38 @@
+# SloerStudio – Component Engineering Rules
+# Every new component created in this codebase MUST comply with the following rules.
+
+## 1. Accessibility (a11y)
+- Every interactive element MUST have an explicit `aria-label` or `aria-labelledby`.
+- All images and icons MUST include `alt` text or `aria-hidden="true"` if purely decorative.
+- Focus states MUST be visible and use `focus-visible:` Tailwind utilities.
+- Use semantic HTML elements (`<button>`, `<nav>`, `<main>`, `<section>`, `<article>`, etc.) — never `<div>` with `onClick` as a substitute for `<button>`.
+- Color contrast MUST meet WCAG AA (4.5:1 for text, 3:1 for large text / UI).
+- All form inputs MUST have associated `<label>` elements or `aria-label`.
+
+## 2. Micro-interactions (Framer Motion)
+- Every hoverable card, button, or interactive surface MUST have a `whileHover` animation (e.g., scale, y-shift, glow, or opacity change).
+- Use the project easing curve `[0.22, 1, 0.36, 1]` as the default ease for consistency.
+- Scroll-triggered elements SHOULD use `whileInView` with `viewport={{ once: true }}` and a blur+fade+translate entrance.
+- Avoid `motion.div` wrappers when a native `motion.button` or `motion.section` is more semantic.
+- Keep animation durations between 0.2s–0.8s to feel snappy but polished.
+
+## 3. Dark / Light Mode Support
+- NEVER hard-code color hex values directly in `className`. Use Tailwind CSS variables defined in `globals.css` (e.g., `text-foreground`, `bg-background`, `border-border`).
+- For any new color token, add both `light` and `dark` values in `globals.css` under `:root` and `.dark` (or `@media (prefers-color-scheme: dark)`).
+- Use Tailwind's `dark:` variant for overrides when CSS variables alone are insufficient.
+- All `boxShadow`, `background`, and `border` inline styles that reference colors MUST use CSS variables or accept a theme-aware prop.
+- Test every component visually in both themes before considering it done.
+
+## 4. Lazy Loading for Remotion Components
+- Any component that imports from `remotion`, `@remotion/player`, or renders a `<Player>` MUST be wrapped in `React.lazy()` and a `<Suspense>` boundary.
+- The `<Suspense>` fallback SHOULD be a lightweight skeleton or spinner that matches the component's dimensions to prevent layout shift.
+- Remotion-heavy pages MUST NOT import Remotion modules at the top level of a Server Component — always isolate them behind a `"use client"` + dynamic `next/dynamic` import with `{ ssr: false }`.
+- Example pattern:
+  ```tsx
+  import dynamic from "next/dynamic";
+  const VideoPlayer = dynamic(() => import("@/components/video/ProductMarketingVideoPlayer"), {
+    ssr: false,
+    loading: () => <div className="aspect-video animate-pulse rounded-2xl bg-white/5" />,
+  });
+  ```
+- This ensures Remotion's heavy JS bundle is excluded from the server-rendered HTML and does not penalize Lighthouse / Core Web Vitals scores.

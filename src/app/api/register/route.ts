@@ -2,7 +2,7 @@ export const dynamic = 'force-dynamic'
 import { NextRequest, NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import { z } from "zod";
-import { prisma } from "@/lib/prisma";
+import { prismaEdge } from "@/lib/prisma-edge";
 
 const schema = z.object({
   name: z.string().min(2),
@@ -15,12 +15,12 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const data = schema.parse(body);
-    const exists = await prisma.user.findUnique({ where: { email: data.email } });
+    const exists = await prismaEdge.user.findUnique({ where: { email: data.email } });
     if (exists) {
       return NextResponse.json({ error: "Email already registered" }, { status: 409 });
     }
     const passwordHash = await bcrypt.hash(data.password, 12);
-    const user = await prisma.user.create({
+    const user = await prismaEdge.user.create({
       data: {
         name: data.name,
         email: data.email,

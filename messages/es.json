@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "SloerStudio — La Plataforma de Desarrollo Agéntico",
+    "description": "IDE de escritorio multiplataforma de nueva generación, construido para enjambres de agentes IA, terminales multipanel y flujos de trabajo de vibe coding."
+  },
+  "nav": {
+    "products": "Productos",
+    "pricing": "Precios",
+    "about": "Nosotros",
+    "community": "Comunidad",
+    "blog": "Blog",
+    "login": "Iniciar sesión",
+    "getStarted": "Empezar",
+    "dashboard": "Panel",
+    "admin": "Admin"
+  },
+  "hero": {
+    "eyebrow": "Plataforma de desarrollo agéntico",
+    "title1": "Construye con agentes,",
+    "title2": "envía como un operador.",
+    "description": "SloerStudio es el sistema operativo para builders nativos de IA. Dictado por voz, enjambres multiagente, lienzos espaciales y un terminal insignia — todo en una plataforma.",
+    "cta": "Empezar a construir",
+    "secondary": "Ver el film"
+  },
+  "ecosystem": {
+    "eyebrow": "Ecosistema de productos",
+    "title": "Seis productos. Un sistema operativo.",
+    "description": "Cada superficie del stack Sloer está diseñada para funcionar de forma independiente y componer cuando se combinan."
+  },
+  "films": {
+    "eyebrow": "Films de producto",
+    "title": "Films cinematográficos para el stack Sloer.",
+    "description": "La capa de films debe sentirse como una campaña de lanzamiento: un spot insignia dominante, cortes secundarios más apretados y una presentación que se vea premium.",
+    "featured": "Film destacado",
+    "watch": "Ver",
+    "view": "Abrir",
+    "openProductPage": "Abrir página del producto",
+    "filmLabel": "Film 30s"
+  },
+  "surfaces": {
+    "eyebrow": "Superficies de plataforma",
+    "title": "Superficies que componen un sistema operativo real.",
+    "description": "Cada superficie resuelve una parte específica del stack de desarrollo y cada una está construida para integrarse con las demás."
+  },
+  "experience": {
+    "eyebrow": "Sistema de experiencia",
+    "title": "Complejidad premium, no atajos ligeros.",
+    "description": "Este primer lote de ejecución apuesta por componentes más ricos, ritmo visual más denso, jerarquía más fuerte y movimiento más cinematográfico para que el sitio se sienta inmediatamente digno de escalar."
+  },
+  "pricing": {
+    "eyebrow": "Precios",
+    "title": "Planes simples. Herramientas serias.",
+    "description": "Empieza gratis, crece a Studio o asegura Enterprise para la capa operativa completa.",
+    "free": "Gratis",
+    "studio": "Studio",
+    "enterprise": "Enterprise",
+    "month": "/mes",
+    "currentPlan": "Plan actual",
+    "upgrade": "Mejorar plan",
+    "contactSales": "Contactar ventas",
+    "perSeat": "por usuario"
+  },
+  "trust": {
+    "eyebrow": "Capa de confianza",
+    "title": "La confianza se diseña, no se declara.",
+    "description": "El modelo de seguridad, privacidad y gobernanza detrás de SloerStudio está diseñado para equipos que tratan la infraestructura en serio."
+  },
+  "cta": {
+    "eyebrow": "Listo para enviar",
+    "title": "Empieza a construir con SloerStudio.",
+    "description": "Únete a los builders que tratan a los agentes IA como compañeros reales, no como juguetes experimentales.",
+    "primary": "Empezar gratis",
+    "secondary": "Explorar el ecosistema"
+  },
+  "footer": {
+    "tagline": "La plataforma de desarrollo agéntico.",
+    "products": "Productos",
+    "company": "Empresa",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "about": "Nosotros",
+    "careers": "Empleo",
+    "blog": "Blog",
+    "docs": "Documentación",
+    "changelog": "Novedades",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "copyright": "© {year} SloerStudio. Todos los derechos reservados."
+  },
+  "video": {
+    "backToHome": "← Volver",
+    "notFound": "Video no encontrado."
+  },
+  "admin": {
+    "controlPlane": "Plano de Control // Vista General",
+    "title1": "Control empresarial,",
+    "title2": "hecho legible.",
+    "refreshSignals": "Actualizar señales",
+    "refreshing": "Actualizando...",
+    "openUserGovernance": "Abrir gobernanza de usuarios"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Algo salió mal.",
+    "retry": "Reintentar"
+  }
+}

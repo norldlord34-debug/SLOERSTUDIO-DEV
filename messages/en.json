@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "title": "SloerStudio — The Agentic Development Platform",
+    "description": "Next-generation cross-platform desktop IDE built for AI agent swarms, multi-pane terminals, and vibe coding workflows."
+  },
+  "nav": {
+    "products": "Products",
+    "pricing": "Pricing",
+    "about": "About",
+    "community": "Community",
+    "blog": "Blog",
+    "login": "Log in",
+    "getStarted": "Get started",
+    "dashboard": "Dashboard",
+    "admin": "Admin"
+  },
+  "hero": {
+    "eyebrow": "Agentic development platform",
+    "title1": "Build with agents,",
+    "title2": "ship like an operator.",
+    "description": "SloerStudio is the operating system for AI-native builders. Voice dictation, multi-agent swarms, spatial canvases, and a flagship terminal — all in one platform.",
+    "cta": "Start building",
+    "secondary": "Watch the film"
+  },
+  "ecosystem": {
+    "eyebrow": "Product ecosystem",
+    "title": "Six products. One operating system.",
+    "description": "Every surface in the Sloer stack is designed to work independently and compound when combined."
+  },
+  "films": {
+    "eyebrow": "Product films",
+    "title": "Cinematic product films for the Sloer stack.",
+    "description": "The film layer should feel like a launch campaign: a dominant flagship spot, tighter secondary cuts, and presentation chrome that looks expensive instead of generic.",
+    "featured": "Featured film",
+    "watch": "Watch",
+    "view": "View",
+    "openProductPage": "Open product page",
+    "filmLabel": "30s film"
+  },
+  "surfaces": {
+    "eyebrow": "Platform surfaces",
+    "title": "Surfaces that compound into a real operating system.",
+    "description": "Each surface solves a specific part of the developer stack and each one is built to integrate with the others."
+  },
+  "experience": {
+    "eyebrow": "Experience system",
+    "title": "Premium complexity, not lightweight shortcuts.",
+    "description": "This first execution batch leans into richer componentry, denser visual rhythm, stronger hierarchy, and more cinematic motion so the site immediately feels worth scaling into a serious company platform."
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "Simple plans. Serious tools.",
+    "description": "Start free, grow into Studio, or lock in Enterprise for the full operating layer.",
+    "free": "Free",
+    "studio": "Studio",
+    "enterprise": "Enterprise",
+    "month": "/month",
+    "currentPlan": "Current plan",
+    "upgrade": "Upgrade",
+    "contactSales": "Contact sales",
+    "perSeat": "per seat"
+  },
+  "trust": {
+    "eyebrow": "Trust layer",
+    "title": "Trust is engineered, not declared.",
+    "description": "The security, privacy, and governance model behind SloerStudio is designed for teams that treat infrastructure seriously."
+  },
+  "cta": {
+    "eyebrow": "Ready to ship",
+    "title": "Start building with SloerStudio.",
+    "description": "Join the builders who treat AI agents as real teammates, not experimental toys.",
+    "primary": "Get started free",
+    "secondary": "Explore the ecosystem"
+  },
+  "footer": {
+    "tagline": "The agentic development platform.",
+    "products": "Products",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "about": "About",
+    "careers": "Careers",
+    "blog": "Blog",
+    "docs": "Docs",
+    "changelog": "Changelog",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": "© {year} SloerStudio. All rights reserved."
+  },
+  "video": {
+    "backToHome": "← Back",
+    "notFound": "Video not found."
+  },
+  "admin": {
+    "controlPlane": "Control Plane // Overview",
+    "title1": "Company control,",
+    "title2": "made legible.",
+    "refreshSignals": "Refresh signals",
+    "refreshing": "Refreshing...",
+    "openUserGovernance": "Open user governance"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong.",
+    "retry": "Retry"
+  }
+}
